@@ -25,7 +25,7 @@ Null-text inversion enables intuitive text-based editing of **real images** with
 
 
 ## Aggregate CrossAttention Map
-eDiff-I argues that crossAttion Map between query and key activates only in early sample steps.
+eDiff-I argues that crossAttion Map between query and key activates only in early sample steps, so we only sample for a few early steps, but actually what really spends time is in the tuning phase!
 ![image](https://github.com/Scorbinwen/DiffSegX/assets/29889669/70101c36-792a-47c5-ac8c-8c562c787a11)
 
 # Tuning-Free Method for DiffSegX
