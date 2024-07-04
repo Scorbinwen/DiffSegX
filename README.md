@@ -1,5 +1,5 @@
 # DiffSegX
-## Exploring Diffusion Model for segmentation
+## Exploring Diffusion Model for segmentation for real image
 Implementation is based on **prompt2prompt**: [Project Page](https://prompt-to-prompt.github.io)&ensp;&ensp;&ensp;[Paper](https://prompt-to-prompt.github.io/ptp_files/Prompt-to-Prompt_preprint.pdf)
 > *Tuning method* and *Tuning free Method* Result
 
