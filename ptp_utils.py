@@ -191,7 +191,6 @@ def register_attention_control(model, controller):
             v = self.reshape_heads_to_batch_dim(v)
 
             sim = torch.einsum("b i d, b j d -> b i j", q, k) * self.scale
-
             if mask is not None:
                 mask = mask.reshape(batch_size, -1)
                 max_neg_value = -torch.finfo(sim.dtype).max
@@ -200,7 +199,7 @@ def register_attention_control(model, controller):
 
             # attention, what we cannot get enough of
             attn = sim.softmax(dim=-1)
-            attn = controller(attn, is_cross, place_in_unet)
+            controller(q, k , v, self.scale, is_cross, place_in_unet)
             out = torch.einsum("b i j, b j d -> b i d", attn, v)
             out = self.reshape_batch_dim_to_heads(out)
             return to_out(out)

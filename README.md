@@ -98,4 +98,4 @@ This is not an officially supported Google product.
 
 [p2p-ldm]: prompt-to-prompt_ldm.ipynb
 [p2p-stable]: prompt-to-prompt_stable.ipynb
-[null_text]: null_text_w_ptp.ipynb
+[null_text]: tuning_diff_seg.ipynb
